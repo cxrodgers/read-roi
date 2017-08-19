@@ -117,6 +117,9 @@ def read_roi_file(fpath):
         # raise an error
         return None
 
+    # Comes back as characters but we want them as integers
+    data = map(ord, data)
+    
     size = len(data)
     code = '>'
 
